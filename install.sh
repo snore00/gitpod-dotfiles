@@ -2,8 +2,8 @@
 
 echo "This is from the install script"
 
-#git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-#~/.config/emacs/bin/doom install
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
@@ -25,3 +25,5 @@ while read -r file; do
     ln -sf "${file}" "${target_file}"
 
 done < <(find "${dotfiles_source}" -type f)
+
+export PATH=$PATH:~/.config/emacs/bin
