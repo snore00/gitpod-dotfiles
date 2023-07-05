@@ -26,4 +26,4 @@ while read -r file; do
 
 done < <(find "${dotfiles_source}" -type f)
 
-export PATH=$PATH:~/.config/emacs/bin
+export PATH="$HOME/.emacs.d/bin:$PATH"
